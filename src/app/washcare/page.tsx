@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 
 const Page = () => {
-  const [activeSection, setActiveSection] = useState('all'); // State to manage active section
+  const [activeSection, setActiveSection] = useState('all'); 
 
   const renderContent = () => {
     if (activeSection === 'washing') {
