@@ -1,103 +1,297 @@
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image';
+import men from '../../public/categories/men.jpeg'
+import women from '../../public/categories/women.jpeg'
+import homeFurnishing from '../../public/categories/homeFurnishing.jpeg'
+import fabrics from '../../public/categories/fabrics.jpeg'
+import { Caveat } from "next/font/google";
+import background from '../../public/categories/background.jpeg'
+import pashmina from '../../public/categories/pashmina.jpeg'
+import nanda from '../../public/categories/nanda.jpeg'
+import almora from '../../public/categories/almora.jpeg'
+import kausani from '../../public/categories/kausani.jpeg'
+import sustainable from '../../public/categories/sustainable.webp'
+import foot from '../../public/categories/foot.webp'
+import ethical from '../../public/categories/ethical.webp'
+import Link from "next/link"
+import UserIcon from './components/UserIcon';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from './components/Footer';
+import Slider from './components/Slider'
+import about from "../../public/categories/about-group.jpg";
+import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
+
+const caveat = Caveat({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <main className='font-poppins '>
+        <section className='mt-12 py-12 bg-neutral-800 text-white'>
+          <Slider />
+          <div className='container mx-auto max-w-5xl pt-16'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='text-center p-6 border border-white/20 rounded-xl'>
+                <div className='text-5xl font-bold mb-2 text-yellow-600'>
+                  500+
+                </div>
+                <div className='text-lg text-white/80'>
+                  Women Weavers Empowered
+                </div>
+                <div className='mt-4'>
+                  <div className='w-full bg-white/20 h-2 rounded-full overflow-hidden'>
+                    <div className='bg-white h-full w-10 rounded-full'></div>
+                  </div>
+                  <div className='mt-2 text-sm text-white/60'>
+                    Target: 5000
+                  </div>
+                </div>
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <div className='text-center p-6 border border-white/20 rounded-xl'>
+                <div className='text-5xl font-bold mb-2 text-yellow-600'>
+                  1995
+                </div>
+                <div className='text-lg text-white/80'>
+                  Strengthening Weavers since
+                </div>
+              </div>
+
+              <div className='text-center p-6 border border-white/20 rounded-xl'>
+                <div className='text-5xl font-bold mb-2 text-yellow-600'>
+                  30+
+                </div>
+                <div className='text-lg text-white/80'>
+                  Years of Transforming Lives
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section className='pt-12 md:py-10 bg-gray-50'>
+          <div className='max-w-auto mx-auto px-2 md:px-4'>
+
+            <h1 className={`font-bold md:font-normal text-center mb-12 text-yellow-600 ${caveat.className} text-6xl `}>Timeless Elegance for Everyone</h1>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10 md:px-18'>
+
+              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
+                <Image src={men} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
+                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
+                  <h3 className='text-2xl font-bold mb-2'>Men</h3>
+                  <p className='text-sm text-gray-200'>Timeless menswear crafted with tradition </p>
+                </div>
+
+              </Link>
+
+              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
+                <Image src={women} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
+                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
+                  <h3 className='text-2xl font-bold mb-2'>Women</h3>
+                  <p className='text-sm text-gray-200'>Elegant womenswear with cultural heritage </p>
+                </div>
+
+              </Link>
+
+              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
+                <Image src={homeFurnishing} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
+                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
+                  <h3 className='text-2xl font-bold mb-2'>Home Furnishing</h3>
+                  <p className='text-sm text-gray-200'>Transform your space with handcrafted elegance </p>
+                </div>
+
+              </Link>
+
+              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
+                <Image src={fabrics} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
+                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
+                  <h3 className='text-2xl font-bold mb-2'>Fabrics</h3>
+                  <p className='text-sm text-gray-200'>Premium handwoven fabrics for every need </p>
+                </div>
+
+              </Link>
+            </div>
+
+          </div>
+
+        </section>
+
+        <div className='relative mt-8 w-full h-[350px] bg-cover bg-no-repeat bg-center items-center justify-center text-white'>
+          <Image src={background} className='w-full h-full object-cover absolute mix-blend-darken' alt='fabric-image' />
+          <div className={`relative z-10 text-center flex flex-col pt-15 gap-6 font-black ${caveat.className}`}>
+            <h1 className='text-6xl font-semibold tracking-wide hover:text-yellow-600 transition-all duration-500'>
+              Beautiful
+            </h1>
+            <h1 className='text-6xl font-semibold tracking-wide hover:text-yellow-600 transition-all duration-500'>
+              Purposeful
+            </h1>
+            <h1 className='text-6xl font-semibold tracking-wide hover:text-yellow-600 transition-all duration-500'>
+              Sustainable
+            </h1>
+          </div>
         </div>
+
+        <section className='py-2'>
+          <div className='max-w-auto mx-auto px-4 md:px-18 pt-8'>
+            <h2 className={`text-6xl font-extrabold md:font-normal text-center mb-4 md:mb-12 text-yellow-600 ${caveat.className} `}>Our Collections</h2>
+
+            <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
+              <div className=''>
+                <h2 className='text-xl md:text-3xl font-semibold text-gray-900 '>
+                  PREMIUM PANCHACHULI PRIDE
+                </h2>
+                <h2 className='text-xl font-semibold mb-2 text-yellow-600'>Pashmina</h2>
+                <p className='md:text-lg text-justify text-gray-950 font-light leading-snug md:leading-snug'>
+                  The Panchachuli collection of pure luxurious Pashminas is inspired by the high-altitude home of the Mongolian nomad, called Munsiyari. Munsyari is the last town before the frontier and is dominated by the massive Panchachuli range towering above the town to the North. Over time, we have not only maintained the authenticity and understated luxury of these rare pashmina, fibers but also created a beautiful products that are sustainable and of the extraordinary contribution of the artisans. The word &apos;pashmina&apos; comes from the Persian word &apos;pashm&apos; meaning &apos;wool&apos; and refers to the undercoat of the Changthang goat, which lives at high altitudes in the Himalayas, where harsh winters necessitate the growth of this exceptionally fine fiber to provide insulation.
+                </p>
+              </div>
+              <div className="rounded-2xl overflow-hidden h-[200px] md:h-[400px] relative">
+                <Image
+                  src={pashmina}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  alt="image"
+                />
+              </div>
+            </div>
+
+            <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
+              <div className='md:order-2'>
+                <h2 className='text-xl md:text-3xl font-semibold text-gray-900 '>
+                  NANDA DEVI COLLECTION
+                </h2>
+                <h2 className='text-xl font-semibold mb-2 text-yellow-600'>Merino and Lambswool</h2>
+                <p className='md:text-lg text-justify text-gray-950 font-light leading-snug md:leading-snug'>
+                  Spirit of gentle, traditional and immense hills and valleys of Nanda Devi, this collection is made with natural resources available in the Himalayas. We select the finest Merino, which comes from Merino sheeps and transform them into the quality handwoven fashion accessories and fabric.
+                </p>
+              </div>
+              <div className="rounded-2xl overflow-hidden">
+                <Image src={nanda} className="w-full h-auto transition-transform hover:scale-105 duration-700 object-cover" alt="image" />
+              </div>
+            </div>
+
+            <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
+              <div className=''>
+                <h2 className='text-xl md:text-3xl font-semibold text-gray-900 '>
+                  ALMORA TWEED
+                </h2>
+                <h2 className='text-xl font-semibold mb-2 text-yellow-600'>Merino Wool</h2>
+                <p className='md:text-lg text-justify text-gray-950 font-light leading-snug md:leading-snug'>
+                  The story of Almora tweed is about the revival of the art of tweed making by the women of Almora, Uttarakhand. The Almora pattern has been passed down through generations, but the practice had almost disappeared due to time and circumstances. The beautiful handcrafted tweed is suitable for any occasion to give you a stylish and classy look and feel.
+                </p>
+              </div>
+              <div className='relative h-[350px] rounded-2xl overflow-hidden'>
+                <Image src={almora} className='absolute insert-0 bg-cover bg-center transition-transform hover:scale-105 duration-700' alt='image' />
+              </div>
+            </div>
+
+            <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
+              <div className='md:order-2'>
+                <h2 className='text-xl md:text-3xl font-semibold text-gray-900 '>
+                  KAUSANI COLLECTION
+                </h2>
+                <h2 className='text-xl font-semibold mb-2 text-yellow-600'>Hemp|Nettle|Bamboo|Organic Cotton</h2>
+                <p className='md:text-lg text-justify text-gray-950 font-light leading-snug md:leading-snug'>
+                  Inspired by the cool breeze and lush landscapes of Kausani, this collection brings the freshness of the mountains into everyday life. Moving beyond wool and winter wear, we are working with natural, breathable yarns — hemp, nettle, bamboo, and organic cotton — to create a range that is perfect for warmer days. From lightweight clothing to soft home furnishings, every piece is crafted with sustainability at its core. Handwoven by skilled artisans, this collection carries the essence of Kumaon — rooted in tradition, designed for comfort, and made for all seasons.
+                </p>
+              </div>
+              <div className='relative h-[350px] rounded-2xl overflow-hidden md:order-1'>
+                <Image src={kausani} className='absolute insert-0 bg-cover bg-center transition-transform hover:scale-105 duration-700' alt='image' />
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <div className='w-full overflow-hidden'>
+          <h2 className={`text-6xl font-normal text-center my-8 mt-24 px-4 text-yellow-600 ${caveat.className}`}>
+            You make a difference with every purchase!
+          </h2>
+
+          <div className='relative w-full h-96 sm:h-[450px] md:h-[550px] lg:h-screen bg-no-repeat bg-center bg-cover overflow-hidden'>
+            <Image
+              src={about}
+              alt='fabric-image'
+              fill
+              className='object-cover absolute inset-0 z-0'
+            />
+
+            <div className="bg-white/40 backdrop-blur-sm p-4 mt-[60vh] mr-[40vh] rounded-lg shadow-lg w-11/12 sm:w-96 mx-auto relative z-10">
+              <h1 className='text-gray-800 text-justify text-xl'>
+                Every time you choose Panchachuli, you support countless women in the Himalayas, giving them the opportunity to transform their lives, achieve financial independence, and keep their rich weaving traditions alive.
+              </h1>
+            </div>
+          </div>
+        </div>
+
+
+        <div className='flex flex-wrap lg:h-screen justify-center items-center'>
+
+          <div className='relative h-96 sm:h-[450px] md:h-[550px] lg:h-screen  mt-10 bg-no-repeat bg-center bg-cover rounded-lg overflow-hidden'>
+            <Image src={sustainable} className='h-[800px] w-[600px]' alt='photo' />
+          </div>
+
+          <div className='relative h-96 sm:h-[450px] md:h-[550px] lg:h-screen w-full md:w-1/2 mt-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 p-6 overflow-hidden'>
+            <div className={`flex justify-center text-4xl md:text-7xl font-regular text-yellow-600 ${caveat}`}>
+              Sustainable
+            </div>
+            <div className='flex flex-col md:flex-row mt-6 md:mt-8 w-full justify-evenly items-center'>
+              <div className='flex flex-col items-center w-full md:w-1/3 p-4'>
+                <Image src={foot} alt='foot' />
+                <h1 className='text-lg font-bold mt-4'>NEGLIGIBLE</h1>
+                <p className='mt-2 text-center text-gray-600'>Practically immeasurable Carbon Footprint</p>
+              </div>
+              <div className='flex flex-col items-center w-full md:w-1/3 p-4'>
+                <Image src={ethical} alt='foot' />
+                <h1 className='text-lg font-bold mt-4'>100%</h1>
+                <p className='mt-2 text-center text-gray-600'>Ethical practices only</p>
+              </div>
+            </div>
+            <p className='mt-8 p-5 text-center text-gray-700'>
+              Panchachuli is committed to preserving and giving back to the environment.
+            </p>
+          </div>
+
+          <section className='py-6  md:py-10 px-4 transition-opacity '>
+            <div className='container mx-auto max-w-5xl'>
+              <h2 className='text-3xl md:text-4xl font-bold text-neutral-800 mb-2 text-center'>A Positive Impact </h2>
+              <p className='text-xl text-neutral-600 mb-16 text-center'>A step towards change</p>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
+                <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>
+                  <div className='flex justify-center mb-6'>
+                    <div className=' bg-neutral-100 rounded-full py-3 px-4'><div><UserIcon /></div></div>
+                  </div>
+                  <h3 className='text-xl font-semibold mb-4 text-neutral-800 text-center'>Economic Empowerment</h3>
+                  <p className='text-neutral-600 text-center'>Women now have the power to earn, make independent financial choices, and build a secure future reducing reliance on agriculture and its uncertainties.</p>
+                </div>
+
+                <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>
+                  <div className='flex justify-center mb-6'>
+                    <div className='p-4 bg-neutral-100 rounded-full'><FontAwesomeIcon icon="heart" className="text-red-500 text-2xl" /></div>
+                  </div>
+                  <h3 className='text-xl font-semibold mb-4 text-neutral-800 text-center'>Better Quality of Life</h3>
+                  <p className='text-neutral-600 text-center'>With stable incomes, families can now access quality education and healthcare, paving the way for a brighter future for their children.</p>
+                </div>
+
+                <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>
+                  <div className='flex justify-center mb-6'>
+                    <div className='p-4 bg-neutral-100 rounded-full'><FontAwesomeIcon icon={["fas", "map"]} className="text-xl" /></div>
+                  </div>
+                  <h3 className='text-xl font-semibold mb-4 text-neutral-800 text-center'>Preserving Tradition</h3>
+                  <p className='text-neutral-600 text-center'>We hope to revive handloom by making this one-of-a-kind textile accessible to the international market.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <WhatsAppFloatingButton />
+          <Footer />
+
+        </div>
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
+
+
