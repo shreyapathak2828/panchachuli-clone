@@ -51,57 +51,70 @@ function about() {
                 </section>
 
                 <div className='max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
-                    <div className='flex flex-col md:flex-row items-center justify-between mb-20'>
-                        <div className=' mb-8 md:mb-0 md:pr-12'>
+                    <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-20'>
 
-                            <div className='flex'>
-                                <div className='ml-10 md:w-1/2'>
-                                    <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4'>OUR AIM</h2>
-                                    <p className='text-lg text-gray-800 text-justify font-[300] leading-snug'>The primary objective is to promote local handicrafts and artworks that are sybols of the Himalayan cultural heritage. In so doing, we also create sustainable livelihood avenues for the marginalized craft communities who are living in some of the most remote areas of the Himalayas in India. These artisans are at the far end of the supply chain and yet have amazing traditional wisdom and skills. We intend to create a sustainable hub for the handloom products of the state and act as a robust link between primary producers and destined international markets. The aim is to strengthen traditional craft value chains thereby bringing the desired change in society.</p>
-                                </div>
-                                <div className='md:w-1/2 ml-10'>
-                                    <Image src={aim} alt="image" className='rounded-lg shadow-lg w-full h-auto' />
-                                </div>
-                            </div>
+                        <div className='md:w-1/2'>
+                            <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 text-center md:text-left'>
+                                OUR AIM
+                            </h2>
+                            <p className='text-base sm:text-lg text-gray-800 text-justify font-[300] leading-snug'>
+                                The primary objective is to promote local handicrafts and artworks that are symbols of the Himalayan cultural heritage.
+                                In so doing, we also create sustainable livelihood avenues for the marginalized craft communities who are living in some of
+                                the most remote areas of the Himalayas in India. These artisans are at the far end of the supply chain and yet have amazing
+                                traditional wisdom and skills. We intend to create a sustainable hub for the handloom products of the state and act as a robust
+                                link between primary producers and destined international markets. The aim is to strengthen traditional craft value chains thereby
+                                bringing the desired change in society.
+                            </p>
+                        </div>
 
+                        <div className='md:w-1/2'>
+                            <Image src={aim} alt='image' className='rounded-lg shadow-lg w-full h-auto object-cover' />
                         </div>
                     </div>
 
-                    <div className='flex flex-col md:flex-row items-center justify-between mb-20'>
+                    <div className='flex flex-col md:flex-row items-center justify-between gap-8 mb-20'>
                         <div className=' mb-8 md:mb-0 md:pr-12'>
 
-
-
-
                             <div className='flex'>
-                                <div className='md:w-1/2 '>
-                                    <Image src={strength} alt="image" className='rounded-lg shadow-lg w-full h-auto' />
+                                <div className='md:w-1/2 w-full '>
+                                    <Image src={strength} alt="image" className='rounded-lg shadow-lg w-full h-auto object-cover' />
                                 </div>
-                                <div className='ml-10 md:w-1/2'>
-                                    <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 '>OUR STRENGTH</h2>
-                                    <p className=' text-lg text-gray-800 text-justify font-[300] leading-snug'>We have well equipped in-house production centers coupled with a dedicated team of highly skilled master craft persons (producers), technical experts (subject matter specialist), and design professionals. together, we design and create fashionable and sustainable textiles and products that meet the needs of our most discerning buyers.</p>
+                                <div className='md:w-1/2 w-full pl-8 px-2'>
+                                    <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 text-center md:text-left'>OUR STRENGTH</h2>
+                                    <p className=' text-base sm:text-lg text-gray-800 text-justify font-[300] leading-snug'>We have well equipped in-house production centers coupled with a dedicated team of highly skilled master craft persons (producers), technical experts (subject matter specialist), and design professionals. together, we design and create fashionable and sustainable textiles and products that meet the needs of our most discerning buyers.</p>
 
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
 
-                    <div className='flex flex-col md:flex-row items-center justify-between mb-20'>
-                        <div className=' mb-8 md:mb-0 md:pr-12'>
+                    <div className="flex flex-col md:flex-row items-center justify-between mb-20 px-4 md:px-8">
+                        <div className="mb-8 md:mb-0 md:pr-12 w-full">
+                            <div className="flex flex-col md:flex-row items-center gap-6">
 
-                            <div className='flex'>
-                                <div className='ml-10 md:w-1/2'>
-                                    <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4'>OUR USP</h2>
-                                    <p className='text-lg text-gray-800 text-justify font-[300] leading-snug'>Our aim is to highlight local skills,keep pace with modern fashion trends through our innovative designs and use of modern technology and ensure that we maintain our quality standards at all times. Our emphasis on environmentally friendly and energy-efficient craft practices and our commitment to the upliftment and security of our women-artisans is of paramount importance to us. We pride ourselves on being able to showcase our contemporary heritage products which comes with a distinct human touch.</p>
+                                <div className="w-full md:w-1/2">
+                                    <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                                        OUR USP
+                                    </h2>
+                                    <p className="text-lg text-gray-800 text-justify font-light leading-snug">
+                                        Our aim is to highlight local skills, keep pace with modern fashion trends
+                                        through our innovative designs and use of modern technology and ensure that
+                                        we maintain our quality standards at all times. Our emphasis on
+                                        environmentally friendly and energy-efficient craft practices and our
+                                        commitment to the upliftment and security of our women-artisans is of
+                                        paramount importance to us. We pride ourselves on being able to showcase
+                                        our contemporary heritage products which come with a distinct human touch.
+                                    </p>
                                 </div>
-                                <div className='md:w-1/2 ml-10'>
-                                    <Image src={usp} alt="image" className='rounded-lg shadow-lg w-full h-auto' />
+
+                                <div className="w-full md:w-1/2">
+                                    <Image
+                                        src={usp}
+                                        alt="USP image"
+                                        className="rounded-lg shadow-lg w-full h-auto object-cover"
+                                    />
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -311,11 +324,11 @@ function about() {
                     </div>
                 </section>
 
-               <WhatsAppFloatingButton />
+                <WhatsAppFloatingButton />
 
                 <Footer />
 
-            </div>
+            </div >
         </>
 
     )

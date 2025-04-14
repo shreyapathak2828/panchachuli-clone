@@ -75,44 +75,31 @@ export default function Home() {
 
             <h1 className={`font-bold md:font-normal text-center mb-12 text-yellow-600 ${caveat.className} text-6xl `}>Timeless Elegance for Everyone</h1>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10 md:px-18'>
-
-              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
-                <Image src={men} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
-                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
-                  <h3 className='text-2xl font-bold mb-2'>Men</h3>
-                  <p className='text-sm text-gray-200'>Timeless menswear crafted with tradition </p>
-                </div>
-
-              </Link>
-
-              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
-                <Image src={women} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
-                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
-                  <h3 className='text-2xl font-bold mb-2'>Women</h3>
-                  <p className='text-sm text-gray-200'>Elegant womenswear with cultural heritage </p>
-                </div>
-
-              </Link>
-
-              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
-                <Image src={homeFurnishing} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
-                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
-                  <h3 className='text-2xl font-bold mb-2'>Home Furnishing</h3>
-                  <p className='text-sm text-gray-200'>Transform your space with handcrafted elegance </p>
-                </div>
-
-              </Link>
-
-              <Link className='group relative overflow-hidden rounded-2xl aspect-[3/4] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50' href='/category'>
-                <Image src={fabrics} alt="men-image" className=' absolute mix-blend-overlay insert-0 bg-cover bg-center transition-transform group-hover:scale-110 duration-700 ' />
-                <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
-                  <h3 className='text-2xl font-bold mb-2'>Fabrics</h3>
-                  <p className='text-sm text-gray-200'>Premium handwoven fabrics for every need </p>
-                </div>
-
-              </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-16 place-items-center">
+              {[
+                { src: men, title: "Men", desc: "Timeless menswear crafted with tradition" },
+                { src: women, title: "Women", desc: "Elegant womenswear with cultural heritage" },
+                { src: homeFurnishing, title: "Home Furnishing", desc: "Transform your space with handcrafted elegance" },
+                { src: fabrics, title: "Fabrics", desc: "Premium handwoven fabrics for every need" },
+              ].map((item, index) => (
+                <Link
+                  key={index}
+                  href="/category"
+                  className="group relative overflow-hidden rounded-2xl aspect-[3/4] w-full max-w-[300px] transition-transform hover:-translate-y-2 bg-gradient-to-t from-black/80 via-black/60 to-black/50"
+                >
+                  <Image
+                    src={item.src}
+                    alt={`${item.title}-image`}
+                    className="absolute inset-0 w-full h-full object-cover mix-blend-overlay transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-200">{item.desc}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
+
 
           </div>
 
@@ -232,26 +219,36 @@ export default function Home() {
             <Image src={sustainable} className='h-[800px] w-[600px]' alt='photo' />
           </div>
 
-          <div className='relative h-96 sm:h-[450px] md:h-[550px] lg:h-screen w-full md:w-1/2 mt-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 p-6 overflow-hidden'>
-            <div className={`flex justify-center text-4xl md:text-7xl font-regular text-yellow-600 ${caveat}`}>
+          <div className="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-screen w-full md:w-1/2 mt-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 sm:p-6 overflow-hidden">
+            
+            <div className={`text-3xl sm:text-5xl md:text-7xl font-regular text-yellow-600 text-center ${caveat}`}>
               Sustainable
             </div>
-            <div className='flex flex-col md:flex-row mt-6 md:mt-8 w-full justify-evenly items-center'>
-              <div className='flex flex-col items-center w-full md:w-1/3 p-4'>
-                <Image src={foot} alt='foot' />
-                <h1 className='text-lg font-bold mt-4'>NEGLIGIBLE</h1>
-                <p className='mt-2 text-center text-gray-600'>Practically immeasurable Carbon Footprint</p>
+
+            <div className="flex flex-col md:flex-row mt-6 md:mt-8 w-full justify-evenly items-center gap-6 md:gap-0">
+             
+              <div className="flex flex-col items-center w-full md:w-1/3 px-4">
+                <Image src={foot} alt="foot" className="w-20 h-20 object-contain" />
+                <h1 className="text-base sm:text-lg font-bold mt-4 text-center">NEGLIGIBLE</h1>
+                <p className="mt-2 text-center text-sm sm:text-base text-gray-600">
+                  Practically immeasurable Carbon Footprint
+                </p>
               </div>
-              <div className='flex flex-col items-center w-full md:w-1/3 p-4'>
-                <Image src={ethical} alt='foot' />
-                <h1 className='text-lg font-bold mt-4'>100%</h1>
-                <p className='mt-2 text-center text-gray-600'>Ethical practices only</p>
+
+              <div className="flex flex-col items-center w-full md:w-1/3 px-4">
+                <Image src={ethical} alt="ethical" className="w-20 h-20 object-contain" />
+                <h1 className="text-base sm:text-lg font-bold mt-4 text-center">100%</h1>
+                <p className="mt-2 text-center text-sm sm:text-base text-gray-600">
+                  Ethical practices only
+                </p>
               </div>
             </div>
-            <p className='mt-8 p-5 text-center text-gray-700'>
+
+            <p className="mt-6 sm:mt-8 px-2 sm:px-5 text-center text-sm sm:text-base text-gray-700 max-w-xl">
               Panchachuli is committed to preserving and giving back to the environment.
             </p>
           </div>
+
 
           <section className='py-6  md:py-10 px-4 transition-opacity '>
             <div className='container mx-auto max-w-5xl'>
