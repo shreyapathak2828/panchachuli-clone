@@ -223,7 +223,7 @@ export default function Home() {
           <div className='relative h-96 sm:h-[450px] md:h-[550px] lg:h-screen  mt-10 bg-no-repeat bg-center bg-cover rounded-lg overflow-hidden'>
             <Image
               src={sustainable}
-              className='h-[600px] w-full md:h-[600px] md:w-[600px] object-cover'
+              className='h-[600px] w-full sm:h-[600px] md:h-[600px] md:w-[600px] object-cover'
               alt='photo'
             />
 
