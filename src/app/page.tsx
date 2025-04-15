@@ -220,16 +220,17 @@ export default function Home() {
 
         <div className='flex flex-wrap lg:h-screen justify-center items-center'>
 
-          <div className='relative h-96 sm:h-[450px] md:h-[550px] lg:h-screen  mt-10 bg-no-repeat bg-center bg-cover rounded-lg overflow-hidden'>
+          <div className='relative h-[600px] sm:h-[600px] md:h-[600px] lg:h-screen mt-10 rounded-lg overflow-hidden'>
             <Image
               src={sustainable}
-              className='h-[600px] w-full sm:h-[600px] md:h-[600px] md:w-[600px] object-cover'
               alt='photo'
+              className='w-full h-full object-cover'
             />
-
           </div>
 
-          <div className="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-screen w-full md:w-1/2 mt-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 sm:p-6 overflow-hidden">
+
+
+          <div className="relative min-h-[400px] sm:min-h-[800px] md:min-h-[550px] lg:min-h-screen w-full md:w-1/2 mt-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 sm:p-6 overflow-hidden">
 
             <div className={`text-3xl sm:text-5xl md:text-7xl font-regular text-yellow-600 text-center ${gellatio.className}`}>
               Sustainable
