@@ -78,7 +78,7 @@ export default function Home() {
         <section className='pt-12 md:py-10 bg-gray-50'>
           <div className='max-w-auto mx-auto px-2 md:px-4'>
 
-            <h1 className={`font-bold md:font-normal text-center mb-12 text-yellow-600 ${gellatio.className} text-6xl `}>Timeless Elegance for Everyone</h1>
+            <h1 className={`font-bold md:font-normal text-center mb-12 text-yellow-600 ${gellatio.className} text-2xl sm:text-6xl md:text-6xl `}>Timeless Elegance for Everyone</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-16 place-items-center">
               {[
@@ -127,7 +127,7 @@ export default function Home() {
 
         <section className='py-2'>
           <div className='max-w-auto mx-auto px-4 md:px-18 pt-8'>
-            <h2 className={`text-6xl font-extrabold md:font-normal text-center mb-4 md:mb-12 text-yellow-600 ${gellatio.className} `}>Our Collections</h2>
+            <h2 className={`text-3xl sm:text-6xl md:text-6xl font-extrabold md:font-normal text-center mb-4 md:mb-12 text-yellow-600 ${gellatio.className} `}>Our Collections</h2>
 
             <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
               <div className=''>
@@ -197,7 +197,7 @@ export default function Home() {
         </section>
 
         <div className='w-full overflow-hidden'>
-          <h2 className={`text-6xl font-normal text-center my-8 mt-24 px-4 text-yellow-600 ${gellatio.className}`}>
+          <h2 className={`text-2xl sm:text-6xl md:text-6xl font-normal text-center my-8 mt-24 px-4 text-yellow-600 ${gellatio.className}`}>
             You make a difference with every purchase!
           </h2>
 

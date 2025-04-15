@@ -30,7 +30,7 @@ function about() {
             <div className='min-h-screen pt-10 bg-neutral-50 font-poppins mt-22' id="ourStory">
                 <section id="mission" className='py-6 md:py-6 px-4 transition-opacity duration-1000 opacity-100'>
                     <div className='container mx-auto max-w-7xl'>
-                        <h1 className={`text-2xl md:text-4xl text-yellow-600 mb-10 text-center ${gellatio.className}`}>Our Story</h1>
+                        <h1 className={`text-4xl sm:text-6xl md:text-6xl text-yellow-600 mb-10 text-center ${gellatio.className}`}>Our Story</h1>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
                             <div>
                                 <h2 className='text-2xl md:text-3xl font-semibold text-neutral-800 mb-6'>Supporting Rural Women in Kumaon Region of Uttarakhand</h2>
@@ -110,7 +110,7 @@ function about() {
                             <div className="flex flex-col md:flex-row items-center gap-6">
 
                                 <div className="w-full md:w-1/2">
-                                    <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+                                    <h2 className="text-center md:text-left text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
                                         OUR USP
                                     </h2>
                                     <p className="text-lg text-gray-800 text-justify font-light leading-snug">
