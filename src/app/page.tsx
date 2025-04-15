@@ -19,15 +19,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from './components/Footer';
 import Slider from './components/Slider'
 import about from "../../public/categories/about-group.jpg";
-import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
+import WhatsAppButton from './components/WhatsAppButton';
+import localFont from "next/font/local";
 
 const caveat = Caveat({ subsets: ["latin"], weight: ["400", "700"] });
+
+const gellatio = localFont({
+  src: "./fonts/gellatio.ttf",
+})
 
 export default function Home() {
   return (
     <>
       <main className='font-poppins '>
-        <section className='mt-12 py-12 bg-neutral-800 text-white'>
+        <section className='mt-7 py-12 bg-neutral-800 text-white'>
           <Slider />
           <div className='container mx-auto max-w-5xl pt-16'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -73,7 +78,7 @@ export default function Home() {
         <section className='pt-12 md:py-10 bg-gray-50'>
           <div className='max-w-auto mx-auto px-2 md:px-4'>
 
-            <h1 className={`font-bold md:font-normal text-center mb-12 text-yellow-600 ${caveat.className} text-6xl `}>Timeless Elegance for Everyone</h1>
+            <h1 className={`font-bold md:font-normal text-center mb-12 text-yellow-600 ${gellatio.className} text-6xl `}>Timeless Elegance for Everyone</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 md:px-16 place-items-center">
               {[
@@ -93,8 +98,8 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover mix-blend-overlay transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-gray-200">{item.desc}</p>
+                    <h3 className="text-2xl md:text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{item.title}</h3>
+                    <p className="text-xl md:text-xs sm:text-sm text-gray-200">{item.desc}</p>
                   </div>
                 </Link>
               ))}
@@ -122,7 +127,7 @@ export default function Home() {
 
         <section className='py-2'>
           <div className='max-w-auto mx-auto px-4 md:px-18 pt-8'>
-            <h2 className={`text-6xl font-extrabold md:font-normal text-center mb-4 md:mb-12 text-yellow-600 ${caveat.className} `}>Our Collections</h2>
+            <h2 className={`text-6xl font-extrabold md:font-normal text-center mb-4 md:mb-12 text-yellow-600 ${gellatio.className} `}>Our Collections</h2>
 
             <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
               <div className=''>
@@ -192,7 +197,7 @@ export default function Home() {
         </section>
 
         <div className='w-full overflow-hidden'>
-          <h2 className={`text-6xl font-normal text-center my-8 mt-24 px-4 text-yellow-600 ${caveat.className}`}>
+          <h2 className={`text-6xl font-normal text-center my-8 mt-24 px-4 text-yellow-600 ${gellatio.className}`}>
             You make a difference with every purchase!
           </h2>
 
@@ -216,17 +221,22 @@ export default function Home() {
         <div className='flex flex-wrap lg:h-screen justify-center items-center'>
 
           <div className='relative h-96 sm:h-[450px] md:h-[550px] lg:h-screen  mt-10 bg-no-repeat bg-center bg-cover rounded-lg overflow-hidden'>
-            <Image src={sustainable} className='h-[800px] w-[600px]' alt='photo' />
+            <Image
+              src={sustainable}
+              className='h-[600px] w-full md:h-[600px] md:w-[600px] object-cover'
+              alt='photo'
+            />
+
           </div>
 
           <div className="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-screen w-full md:w-1/2 mt-10 flex flex-col items-center justify-center rounded-lg bg-gray-100 p-4 sm:p-6 overflow-hidden">
-            
-            <div className={`text-3xl sm:text-5xl md:text-7xl font-regular text-yellow-600 text-center ${caveat}`}>
+
+            <div className={`text-3xl sm:text-5xl md:text-7xl font-regular text-yellow-600 text-center ${gellatio.className}`}>
               Sustainable
             </div>
 
             <div className="flex flex-col md:flex-row mt-6 md:mt-8 w-full justify-evenly items-center gap-6 md:gap-0">
-             
+
               <div className="flex flex-col items-center w-full md:w-1/3 px-4">
                 <Image src={foot} alt="foot" className="w-20 h-20 object-contain" />
                 <h1 className="text-base sm:text-lg font-bold mt-4 text-center">NEGLIGIBLE</h1>
@@ -281,7 +291,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <WhatsAppFloatingButton />
+          <WhatsAppButton />
           <Footer />
 
         </div>

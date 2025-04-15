@@ -24,7 +24,7 @@ const WhatsAppFloatingButton = () => {
     <div className="fixed bottom-5 right-5 z-50">
       {showPopup && (
         <div className="relative bg-white shadow-lg rounded-lg p-4 mb-2 animate-fade-in w-64">
-          {/* Close button */}
+          
           <button
             onClick={() => setShowPopup(false)}
             className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"

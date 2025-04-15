@@ -1,13 +1,17 @@
 import React from 'react'
 import Footer from '../components/Footer';
-import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton'
+import WhatsAppButton from '../components/WhatsAppButton';
+import { League_Script } from "next/font/google";
+
+const LeagueScript = League_Script({ subsets: ["latin"], weight: ["400", "400"] });
 
 function careers() {
+ 
   return (
     <div>
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 p-6 font-poppins'>
       <div className='bg-white shadow-lg rounded-xl p-10 w-full max-w-xl text-center transition-all duration-300 hover:shadow-xl'>
-        <h1 className='text-4xl font-bold text-yellow-600 mb-6 font-leagueScript'>
+        <h1 className={`text-6xl font-extrabold font- text-yellow-600 mb-6 ${LeagueScript.className}`}>
         Join Our Team
         </h1>
         <p className='text-gray-600 mb-2 text-sm md:text-lg leading-relaxed'>We are always looking for talented individuals to join our mission. If you&#39;re passionate about making a difference, we&#39;d love to hear from you.</p>
@@ -19,7 +23,7 @@ function careers() {
 
       </div>
     </div>
-    <WhatsAppFloatingButton />
+    <WhatsAppButton />
     <Footer />
   </div>
   )

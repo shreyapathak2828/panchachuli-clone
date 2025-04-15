@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import { Caveat } from "next/font/google";
+{/*import { Caveat } from "next/font/google";*/ }
 import story from "../../../public/categories/story.png"
 import Image from 'next/image';
 import aim from "../../../public/categories/aim.png"
@@ -15,18 +15,22 @@ import dyeing from "../../../public/categories/dyeing.png"
 import weaving from "../../../public/categories/weaving.png"
 import fabrics from "../../../public/categories/fabrics.jpeg"
 import Footer from '../components/Footer';
-import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton'
+import WhatsAppButton from '../components/WhatsAppButton';
+import localFont from "next/font/local";
 
 
-const caveat = Caveat({ subsets: ["latin"], weight: ["400", "700"] });
+{/*const caveat = Caveat({ subsets: ["latin"], weight: ["400", "700"] });*/ }
+const gellatio = localFont({
+    src: "../fonts/gellatio.ttf",
+})
 
 function about() {
     return (
         <>
-            <div className='min-h-screen bg-neutral-50 font-poppins mt-22' id="ourStory">
+            <div className='min-h-screen pt-10 bg-neutral-50 font-poppins mt-22' id="ourStory">
                 <section id="mission" className='py-6 md:py-6 px-4 transition-opacity duration-1000 opacity-100'>
                     <div className='container mx-auto max-w-7xl'>
-                        <h1 className={`text-2xl md:text-4xl text-yellow-600 mb-10 text-center ${caveat}`}>Our Story</h1>
+                        <h1 className={`text-2xl md:text-4xl text-yellow-600 mb-10 text-center ${gellatio.className}`}>Our Story</h1>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
                             <div>
                                 <h2 className='text-2xl md:text-3xl font-semibold text-neutral-800 mb-6'>Supporting Rural Women in Kumaon Region of Uttarakhand</h2>
@@ -53,40 +57,53 @@ function about() {
                 <div className='max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
                     <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-20'>
 
-                        <div className='md:w-1/2'>
-                            <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 text-center md:text-left'>
-                                OUR AIM
-                            </h2>
-                            <p className='text-base sm:text-lg text-gray-800 text-justify font-[300] leading-snug'>
-                                The primary objective is to promote local handicrafts and artworks that are symbols of the Himalayan cultural heritage.
-                                In so doing, we also create sustainable livelihood avenues for the marginalized craft communities who are living in some of
-                                the most remote areas of the Himalayas in India. These artisans are at the far end of the supply chain and yet have amazing
-                                traditional wisdom and skills. We intend to create a sustainable hub for the handloom products of the state and act as a robust
-                                link between primary producers and destined international markets. The aim is to strengthen traditional craft value chains thereby
-                                bringing the desired change in society.
-                            </p>
-                        </div>
+                        <div className='flex flex-col md:flex-row items-center justify-between mb-20'>
+                            <div className='flex flex-col md:flex-row md:pr-12 gap-8 w-full'>
 
-                        <div className='md:w-1/2'>
-                            <Image src={aim} alt='image' className='rounded-lg shadow-lg w-full h-auto object-cover' />
-                        </div>
-                    </div>
-
-                    <div className='flex flex-col md:flex-row items-center justify-between gap-8 mb-20'>
-                        <div className=' mb-8 md:mb-0 md:pr-12'>
-
-                            <div className='flex'>
-                                <div className='md:w-1/2 w-full '>
-                                    <Image src={strength} alt="image" className='rounded-lg shadow-lg w-full h-auto object-cover' />
+                               
+                                <div className='md:w-1/2 w-full order-1 md:order-1 px-2 md:px-0'>
+                                    <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 text-center md:text-left'>
+                                        OUR AIM
+                                    </h2>
+                                    <p className='text-base sm:text-lg text-gray-800 text-justify font-[300] leading-snug'>
+                                        The primary objective is to promote local handicrafts and artworks that are symbols of the Himalayan cultural heritage.
+                                        In so doing, we also create sustainable livelihood avenues for the marginalized craft communities who are living in some of
+                                        the most remote areas of the Himalayas in India. These artisans are at the far end of the supply chain and yet have amazing
+                                        traditional wisdom and skills. We intend to create a sustainable hub for the handloom products of the state and act as a robust
+                                        link between primary producers and destined international markets. The aim is to strengthen traditional craft value chains thereby
+                                        bringing the desired change in society.
+                                    </p>
                                 </div>
-                                <div className='md:w-1/2 w-full pl-8 px-2'>
-                                    <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 text-center md:text-left'>OUR STRENGTH</h2>
-                                    <p className=' text-base sm:text-lg text-gray-800 text-justify font-[300] leading-snug'>We have well equipped in-house production centers coupled with a dedicated team of highly skilled master craft persons (producers), technical experts (subject matter specialist), and design professionals. together, we design and create fashionable and sustainable textiles and products that meet the needs of our most discerning buyers.</p>
 
+                                
+                                <div className='md:w-1/2 w-full order-2 md:order-2'>
+                                    <Image src={aim} alt="Our Aim Image" className='rounded-lg shadow-lg w-full h-auto object-cover' />
                                 </div>
+
                             </div>
                         </div>
+
+
+
                     </div>
+
+                    <div className='flex flex-col md:flex-row items-center justify-between mb-20'>
+                        <div className='mb-8 md:mb-0 md:pr-12 flex flex-col gap-8 md:flex-row'>
+
+                            <div className='md:w-1/2 w-full order-1 md:order-2 px-2 md:px-0'>
+                                <h2 className='text-2xl md:text-3xl font-semibold text-gray-900 mb-4 text-center md:text-left'>OUR STRENGTH</h2>
+                                <p className='text-base sm:text-lg text-gray-800 text-justify font-[300] leading-snug'>
+                                    We have well equipped in-house production centers coupled with a dedicated team of highly skilled master craft persons (producers), technical experts (subject matter specialist), and design professionals. Together, we design and create fashionable and sustainable textiles and products that meet the needs of our most discerning buyers.
+                                </p>
+                            </div>
+
+                            <div className='md:w-1/2 w-full order-2 md:order-1'>
+                                <Image src={strength} alt="image" className='rounded-lg shadow-lg w-full h-auto object-cover' />
+                            </div>
+
+                        </div>
+                    </div>
+
 
                     <div className="flex flex-col md:flex-row items-center justify-between mb-20 px-4 md:px-8">
                         <div className="mb-8 md:mb-0 md:pr-12 w-full">
@@ -137,7 +154,7 @@ function about() {
                     <header className='bg-cover h-72 flex items-center justify-center'>
                         <div className='container mx-auto px-6 flex justify-center items-center h-full'>
                             <div className='max-w-2xl bg-white/80 backdrop-blur-sm p-1 rounded-lg text-center'>
-                                <h1 className={`text-4xl md:text-5xl font-light text-amber-900 mb-4 ${caveat}`}>Our Weaving Process</h1>
+                                <h1 className={`text-4xl md:text-5xl font-light text-amber-900 mb-4 ${gellatio.className}`}>Our Weaving Process</h1>
                                 <p className='text-lg text-amber-800'>Centuries of tradition meet sustainable innovation in our carefully crafted products. Each piece tells a story of artisanship passed down through generations.</p>
                             </div>
                         </div>
@@ -324,7 +341,7 @@ function about() {
                     </div>
                 </section>
 
-                <WhatsAppFloatingButton />
+                <WhatsAppButton />
 
                 <Footer />
 

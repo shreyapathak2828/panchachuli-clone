@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import Footer from '../components/Footer';
-import WhatsAppFloatingButton from "../components/WhatsAppFloatingButton";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 interface NewsItem {
   _id: string;
@@ -47,7 +47,7 @@ export default function NewsPage() {
 
     
   </div>
-  <WhatsAppFloatingButton />
+  <WhatsAppButton />
   <Footer />
   </div>
     

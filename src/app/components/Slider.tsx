@@ -19,7 +19,7 @@ export default function Carousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % length);
-    }, 4000); 
+    }, 4000);
     return () => clearInterval(interval);
   }, [length]);
 
@@ -32,22 +32,21 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-full h-[80vh] overflow-hidden">
-
-      <div className="relative h-[80vh] transition-transform duration-500 ease-in-out">
+    <div className="relative w-full h-[300px] md:h-[80vh] overflow-hidden">
+      <div className="relative h-[500px] md:h-[80vh] overflow-hidden transition-transform duration-500 ease-in-out">
         {slides.map((slide, index) => (
           <img
             key={index}
             src={slide}
             alt={`Slide ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
-              index === current ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'
+              }`}
           />
         ))}
       </div>
 
-     
+
+
       <button
         onClick={prevSlide}
         className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/60 hover:bg-white rounded-full p-2 shadow"
@@ -61,15 +60,14 @@ export default function Carousel() {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      
+
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === current ? 'bg-white' : 'bg-white/50'
-            }`}
+            className={`w-3 h-3 rounded-full ${index === current ? 'bg-white' : 'bg-white/50'
+              }`}
           />
         ))}
       </div>

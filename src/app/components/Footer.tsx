@@ -1,9 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import localFont from "next/font/local";
+
+{/*const caveat = Caveat({ subsets: ["latin"], weight: ["400", "700"] });*/}
+const gellatio = localFont({
+  src: "../fonts/gellatio.ttf",
+})
 
 const Footer: React.FC = () => {
+  
   return (
     <footer className='bg-gray-800 text-gray-300 py-8 w-full'>
+      <p className={`${gellatio.className} w-full justify-center items-center flex pb-20 pt-5 text-4xl`}>Thank you for the love</p>
       <div className='px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8'>
           <div>

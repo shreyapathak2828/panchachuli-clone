@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../components/Footer';
-import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 function shop() {
   return (
@@ -47,7 +47,7 @@ function shop() {
           </div>
         </div>
       </div>
-      <WhatsAppFloatingButton />
+      <WhatsAppButton />
       <Footer />
     </div>
   )
