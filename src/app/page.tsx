@@ -99,7 +99,7 @@ export default function Home() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
                     <h3 className="text-2xl md:text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{item.title}</h3>
-                    <p className="text-xl md:text-xs sm:text-sm text-gray-200">{item.desc}</p>
+                    <p className="text-xl text-gray-200">{item.desc}</p>
                   </div>
                 </Link>
               ))}
