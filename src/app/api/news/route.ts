@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
-import News from "@/models/news"; // Import your News model
+import News from "@/models/news";
 
 export async function GET() {
   try {

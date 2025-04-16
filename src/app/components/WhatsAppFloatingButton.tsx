@@ -10,7 +10,7 @@ const WhatsAppFloatingButton = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true)
-    }, 5000) // Show popup after 5 seconds
+    }, 5000)
     return () => clearTimeout(timer)
   }, [])
 
